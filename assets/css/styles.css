@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  --main-color: rgb(1, 15, 64);
+}
+
+body {
+  background-image: url(/assets/images/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Dosis", sans-serif;
+}
+
+body #inlog-div {
+  display: block;
+  width: 350px;
+  height: 350px;
+  background-color: white;
+  padding: 3rem;
+  text-align: center;
+  color: var(--main-color);
+  border: 5px solid var(--main-color);
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 120px 10px var(--main-color);
+          box-shadow: 0 0 120px 10px var(--main-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+body #inlog-div::before, body #inlog-div::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-size: 100% 100%;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+body #inlog-div::before {
+  background-image: url(/assets/images/decoration1.png);
+  width: 170px;
+  height: 200px;
+  left: -40px;
+  top: -45px;
+}
+
+body #inlog-div::after {
+  background-image: url(/assets/images/decoration2.png);
+  width: 400px;
+  height: 105px;
+  left: -30px;
+  top: 280px;
+}
+
+body #inlog-div.logged-in {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+body #inlog-div.logged-in::before, body #inlog-div.logged-in::after {
+  opacity: 0;
+}
+
+body #inlog-div.logged-in span,
+body #inlog-div.logged-in #input-answer,
+body #inlog-div.logged-in #output-answer {
+  opacity: 0;
+}
+
+body #inlog-div > span {
+  display: block;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+body #inlog-div > span:first-of-type {
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+body #inlog-div > span:nth-of-type(2) {
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
+
+body #inlog-div #input-answer,
+body #inlog-div #output-answer {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid var(--main-color);
+  text-align: center;
+  line-height: 30px;
+}
+
+body #inlog-div #output-answer {
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+body #inlog-div #output-answer:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+body #inlog-div #normal-content {
+  display: none;
+}
+
+body #inlog-div.show-everything {
+  width: 600px;
+  height: 600px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+body #inlog-div.show-everything::before, body #inlog-div.show-everything::after {
+  display: none;
+}
+
+body #inlog-div.show-everything.show-text #normal-content {
+  display: block;
+  text-align: justify;
+  line-height: 2rem;
+}
+
+body #inlog-div.show-everything.show-text #normal-content span {
+  display: block;
+}
+
+body #inlog-div.show-everything.show-text #normal-content span:last-of-type {
+  text-align: center;
+  font-size: 3rem;
+}
+/*# sourceMappingURL=styles.css.map */
