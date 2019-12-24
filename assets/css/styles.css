@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url(/assets/images/bg.jpg);
+  background-image: url(../images/bg.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -47,7 +47,7 @@ body #inlog-div::before, body #inlog-div::after {
 }
 
 body #inlog-div::before {
-  background-image: url(/assets/images/decoration1.png);
+  background-image: url(../images/decoration1.png);
   width: 170px;
   height: 200px;
   left: -40px;
@@ -55,7 +55,7 @@ body #inlog-div::before {
 }
 
 body #inlog-div::after {
-  background-image: url(/assets/images/decoration2.png);
+  background-image: url(../images/decoration2.png);
   width: 400px;
   height: 105px;
   left: -30px;
@@ -178,14 +178,14 @@ body #inlog-div.show-everything.show-text #present::after {
   display: block;
   width: 100%;
   height: 100%;
-  background-image: url(/assets/images/present-closed.png);
+  background-image: url(../images/present-closed.png);
   background-size: 70% 70%;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 body #inlog-div.show-everything.show-text #present:hover::after {
-  background-image: url(/assets/images/present-open.png);
+  background-image: url(../images/present-open.png);
 }
 
 body #inlog-div.show-everything.show-text #present p,
