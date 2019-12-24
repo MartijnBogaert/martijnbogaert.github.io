@@ -34,4 +34,21 @@ function bigArea() {
 
 function showText() {
     inlogDiv.className += " show-text";
+    document.getElementById("present").addEventListener("click", showPresent);
+}
+
+function showPresent() {
+    inlogDiv.scrollTo(0, 0);
+    inlogDiv.style.overflow = "hidden";
+    document.getElementById("present").className = "opened";
+    document.getElementById("present").removeEventListener("click", showPresent);
+    document.getElementById("close-button").addEventListener("click", closePresent);
+}
+
+function closePresent(event) {
+    event.stopImmediatePropagation();
+    inlogDiv.style.overflow = "";
+    document.getElementById("present").className = "";
+    document.getElementById("close-button").removeEventListener("click", closePresent);
+    document.getElementById("present").addEventListener("click", showPresent);
 }
